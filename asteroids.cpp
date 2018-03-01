@@ -735,6 +735,7 @@ void physics()
 }
 
 extern void showName();
+extern void drawBox(int, int);
 
 void render()
 {
@@ -750,6 +751,8 @@ void render()
 	ggprint8b(&r, 16, 0x00ffff00, "n asteroids destroyed: ");
 	showName();
 	//
+	//
+	drawBox(gl.xres/2,gl.yres/2);
 	//-------------
 	//Draw the ship
 	glColor3fv(g.ship.color);
